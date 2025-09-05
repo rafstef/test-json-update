@@ -41,7 +41,7 @@ pipeline {
                           git config user.name "jenkins"
                           git add test.json
                           git commit -m "Aggiornamento versioni tramite pipeline"
-                          git push origin HEAD:main
+                          git push origin main
                         '''
                     } else {
                         echo "Nessuna modifica da effettuare"
