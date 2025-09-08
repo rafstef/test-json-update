@@ -11,7 +11,7 @@ pipeline {
                     // Generare parametri input dinamici per ogni app
                     def parametersList = []
                     versions.each { app, ver ->
-                        parametersList << string(name: "VERSION_${app.toUpperCase()}", defaultValue: ver, description: "${app} version (placeholder = $ver)")
+                        parametersList << string(name: "VERSION_${app.toUpperCase()}", description: "${app}")
                     }
                     // Definire parametri della build dinamicamente
                     properties([parameters(parametersList)])
